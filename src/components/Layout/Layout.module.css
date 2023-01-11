@@ -1,0 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding-top: 10px;
+    background: rgb(14, 23, 41);
+    height: 100vh;
+    color: white;
+}

@@ -1,7 +1,11 @@
-
-
 .page {
-background: grey;
-height: 100vh;
-color: white;
+    width: 400px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.h1 {
+    font-size: larger;
+    text-align: center;
+    margin-bottom: 10px;
 }
