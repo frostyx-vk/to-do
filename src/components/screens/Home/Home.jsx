@@ -35,7 +35,7 @@ const Home = () => {
         const current = copy.find(t => t._id === id);
         current.isCompleted = !current.isCompleted;
         setTodos(copy);
-    }
+    } 
 
     return (
         <div className={classes.page}>

@@ -2,11 +2,11 @@ import React from "react";
 import {BsCheck} from 'react-icons/bs'
 import classes from './Check.module.css'
 
-const Check = (isCompleted) => {
+const Check = (props) => {
     return (
-        <div className={classes.check}>
+        <div className={`${classes.check} ${props.isCompleted ? classes.background : ''}`}>
             {
-                isCompleted && <BsCheck size={24} style={{color: "rgb(84, 81, 81)"}}/>
+                props.isCompleted && <BsCheck size={24} />
             }
         </div>
     )
