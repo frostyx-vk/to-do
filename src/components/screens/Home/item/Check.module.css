@@ -13,3 +13,7 @@
 .background {
     background-color: rgb(16, 116, 49);
 }
+
+.checkLineThrough {
+    text-decoration: line-through;
+}

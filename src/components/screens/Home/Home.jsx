@@ -2,6 +2,7 @@ import React from "react";
 import classes from "./Home.module.css"
 import TodoItem from "./item/TodoItem";
 import { useState } from "react";
+import CreateTodoField from "./CreateTodoField/CreateTodoField";
 
 const data = [
     {
@@ -39,7 +40,7 @@ const Home = () => {
 
     const removeTodo = (id) => {
         setTodos([...todos].filter(t => t._id !== id));
-    } 
+    }
 
     return (
         <div className={classes.page}>
@@ -51,6 +52,7 @@ const Home = () => {
                 changeTodo={changeTodo} 
                 removeTodo={removeTodo}
                 />)}
+            <CreateTodoField setTodos={setTodos} />
         </div>
     )
 }
