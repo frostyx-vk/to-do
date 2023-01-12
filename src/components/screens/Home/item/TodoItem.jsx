@@ -8,11 +8,10 @@ const TodoItem = (props) => {
         <div className={classes.item}>
             <button onClick={() => props.changeTodo(props.todo._id)} className={classes.removeItem}>
                 <Check isCompleted={props.todo.isCompleted} />
-                <span  >{props.todo.title}</span>
+                <span className={`${props.todo.isCompleted && classes.checkLineThrough}`} >{props.todo.title}</span>
             </button>
             <button onClick={() => props.removeTodo(props.todo._id)}>
-            {/* className= {`${classes.checkLineThrough} : ${props.todo.isCompleted}`} */}
-            <BsTrash size={18} />
+                <BsTrash size={18} />
             </button>
         </div>
     )
