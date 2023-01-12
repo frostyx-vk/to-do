@@ -37,11 +37,20 @@ const Home = () => {
         setTodos(copy);
     } 
 
+    const removeTodo = (id) => {
+        setTodos([...todos].filter(t => t._id !== id));
+    } 
+
     return (
         <div className={classes.page}>
             <h1 className={classes.h1}>Todo</h1>
             {todos.map(todo =>
-                <TodoItem key={todo._id} todo={todo} changeTodo={changeTodo} />)}
+                <TodoItem 
+                key={todo._id} 
+                todo={todo} 
+                changeTodo={changeTodo} 
+                removeTodo={removeTodo}
+                />)}
         </div>
     )
 }
