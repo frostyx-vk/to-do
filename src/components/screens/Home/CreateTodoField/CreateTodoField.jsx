@@ -8,7 +8,7 @@ const CreateTodoField = (props) => {
 
     const addTodo = (title) => {
         props.setTodos(prev => [{
-            _id: new Date,
+            _id: Date.now(),
             title,
             isCompleted: false,
         }, ...prev])
